@@ -17,7 +17,7 @@
 @media screen and (max-width: 700px) {
   .main-parent {
     height: auto;
-    padding: 4rem 0rem;
+    padding: 4rem 0.9rem;
 
     .main-section {
       flex-direction: column-reverse;
@@ -71,6 +71,96 @@
     }
     ul {
       margin-top: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 378px) {
+  .main-parent {
+    .main-section {
+      .left {
+        h1 {
+          font-size: 2.3rem;
+          line-height: 2.4rem;
+        }
+        p {
+          font-size: 1.05rem;
+        }
+      }
+    }
+  }
+  .indiv-main {
+    .proj-heading {
+      font-size: 2.3rem;
+    }
+  }
+  .indiv-project {
+    .indiv-proj-right {
+      h1 {
+        font-size: 1.65rem;
+      }
+      h3 {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 290px) {
+  .main-parent {
+    .main-section {
+      .left {
+        h1 {
+          font-size: 2rem;
+          line-height: 2.2rem;
+        }
+        p {
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+  .indiv-main {
+    .proj-heading {
+      font-size: 2.1rem;
+    }
+  }
+  .indiv-project {
+    .indiv-proj-right {
+      h1 {
+        font-size: 1.5rem;
+      }
+      h3 {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 232px) {
+  .main-parent {
+    .main-section {
+      .left {
+        h1 {
+          font-size: 1.8rem;
+          line-height: 2rem;
+        }
+        p {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+  .indiv-main {
+    .proj-heading {
+      font-size: 1.9rem;
+    }
+  }
+  .indiv-project {
+    .indiv-proj-right {
+      h1 {
+        font-size: 1.35rem;
+      }
+      h3 {
+        font-size: 0.8rem;
+      }
     }
   }
 }
