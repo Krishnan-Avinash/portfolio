@@ -1,0 +1,36 @@
+.about-parent {
+  //   background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  max-width: 940px;
+  max-height: fit-content;
+  margin: 2rem auto;
+  padding: 4rem 1rem 4rem 2rem;
+  .about-left {
+    width: 100%;
+    img {
+      width: 100%;
+      border-radius: 2.5rem;
+    }
+  }
+  .about-right {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    h2 {
+      color: rgb(0, 38, 255);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    h1 {
+      font-weight: bolder;
+      font-size: 2.5rem;
+      line-height: 2.7rem;
+    }
+    h4 {
+      line-height: 1.5rem;
+    }
+  }
+}

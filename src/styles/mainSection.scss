@@ -1,0 +1,100 @@
+.main-parent {
+  display: flex;
+  flex-direction: column;
+  max-width: 940px;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 4rem 1rem 4rem 2rem;
+  .main-section {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 1 auto;
+    .left {
+      width: 50%;
+      min-height: fit-content;
+      display: flex;
+      gap: -1rem;
+      flex-direction: column;
+      justify-content: space-evenly;
+      h1 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+      }
+      p {
+        padding-top: 0.5rem;
+        font-size: 1.15rem;
+      }
+      ul {
+        padding-top: 0.5rem;
+        display: flex;
+        gap: 0.5rem;
+        cursor: pointer;
+        li {
+          list-style: none;
+          transition: all 0.1s linear;
+          img {
+            border-radius: 50%;
+            max-height: 2rem;
+            object-fit: contain;
+          }
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+    .right {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      img {
+        max-height: 20rem;
+        border-radius: 5rem;
+        --border-angle: 0turn;
+        --main-bg: conic-gradient(
+          from var(--border-angle),
+          #213,
+          #112 5%,
+          #112 60%,
+          #213 95%
+        );
+
+        border: solid 5px transparent;
+        border-radius: 2em;
+        --gradient-border: conic-gradient(
+          from var(--border-angle),
+          transparent 25%,
+          rgb(0, 38, 255),
+          rgb(0, 195, 255) 99%,
+          transparent
+        );
+
+        background: var(--main-bg) padding-box,
+          var(--gradient-border) border-box, var(--main-bg) border-box;
+
+        background-position: center center;
+
+        animation: bg-spin 3s linear infinite;
+        @keyframes bg-spin {
+          to {
+            --border-angle: 1turn;
+          }
+        }
+
+        &:hover {
+          animation-play-state: paused;
+        }
+      }
+    }
+  }
+}
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
