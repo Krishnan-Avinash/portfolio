@@ -1,6 +1,6 @@
 import React from "react";
 import proj1 from "../../assets/project1Img.jpg";
-import proj1Vid from "../../assets/proj1Trim.mp4";
+import proj1Vid from "../../assets/proj1Trim2.mov";
 import IndividualProject from "./IndividualProject";
 
 const Projects = () => {
