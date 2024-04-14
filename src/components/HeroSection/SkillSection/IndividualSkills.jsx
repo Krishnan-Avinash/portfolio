@@ -6,12 +6,14 @@ import reactImage from "../../../assets/react.png";
 import tailwindImage from "../../../assets/tailwind-removebg-preview.png";
 import chakraImage from "../../../assets/chakra-removebg-preview.png";
 import sassImage from "../../../assets/sass.png";
+import tsImage from "../../../assets/ts.png";
 
 const IndividualSkills = () => {
   const elements = [
     { image: htmlImage },
     { image: cssImage },
     { image: jsImage },
+    { image: tsImage },
     { image: reactImage },
     { image: tailwindImage },
     { image: chakraImage },
