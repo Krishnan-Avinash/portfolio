@@ -13,7 +13,7 @@ const MainSection = () => {
     <main className="main-parent">
       <div className="main-section">
         <div className="left">
-          <h1>Front-End React Developer</h1>
+          <h1>Full-Stack Developer</h1>
           <p>
             Hi, I'm Palaghat Murali Krishnan Avinash. A passionate Full-Stack
             Developer.
