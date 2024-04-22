@@ -15,8 +15,8 @@ const MainSection = () => {
         <div className="left">
           <h1>Front-End React Developer</h1>
           <p>
-            Hi, I'm Palaghat Murali Krishnan Avinash. A passionate Front-end
-            React Developer.
+            Hi, I'm Palaghat Murali Krishnan Avinash. A passionate Full-Stack
+            Developer.
           </p>
           <ul>
             <li>
