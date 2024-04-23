@@ -2,6 +2,7 @@ import React from "react";
 import proj1 from "../../assets/project1Img.jpg";
 import proj1Vid from "../../assets/proj1Trim2.mov";
 import IndividualProject from "./IndividualProject";
+import { Element } from "react-scroll";
 
 const Projects = () => {
   const proj = [
@@ -24,7 +25,9 @@ const Projects = () => {
   ];
   return (
     <div className="indiv-main">
-      <h1 className="proj-heading">PROJECTS</h1>
+      <h1 className="proj-heading">
+        <Element name="projects">PROJECTS</Element>
+      </h1>
       <ul>
         {proj.map((item, index) => (
           <li key={item.id}>

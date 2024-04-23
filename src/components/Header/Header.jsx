@@ -1,5 +1,6 @@
 import React, { useId } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { BiMenuAltRight } from "react-icons/bi";
 import {
   Button,
@@ -15,11 +16,29 @@ import {
 } from "@chakra-ui/react";
 
 const Header = () => {
+  const location = useLocation();
   const elements = [
-    { name: "Home", linkTo: "/" },
-    { name: "Blogs", linkTo: "/blog" },
-    { name: "Projects", linkTo: "/" },
-    { name: "Contact", linkTo: "/" },
+    {
+      name: "Home",
+      linkTo: "/",
+      type: "route",
+    },
+    {
+      name: "Blogs",
+      linkTo: "/blog",
+      type: "route",
+    },
+    {
+      name: "Projects",
+      linkTo: "",
+      refTo: "projects",
+      type: "scroll",
+    },
+    {
+      name: "Contact",
+      linkTo: "/contact",
+      type: "route",
+    },
   ];
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -29,9 +48,20 @@ const Header = () => {
           <h1 className="header-title">Avinash</h1>
         </Link>
         <ul>
-          {elements.map((item) => (
-            <li key={useId()}>
-              <Link to={item.linkTo}>{item.name}</Link>
+          {elements.map((item, index) => (
+            <li key={index}>
+              {item.type === "scroll" && location.pathname === "/" ? (
+                <ScrollLink
+                  to={item.refTo}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  {item.name}
+                </ScrollLink>
+              ) : (
+                <Link to={item.linkTo}>{item.name}</Link>
+              )}
             </li>
           ))}
         </ul>
@@ -71,7 +101,7 @@ const Header = () => {
                   </Link>
                 </Button>
                 <Button variant={"ghost"} colorScheme="blue">
-                  <Link to={"/"} onClick={onClose}>
+                  <Link to={"/contact"} onClick={onClose}>
                     Contact
                   </Link>
                 </Button>
