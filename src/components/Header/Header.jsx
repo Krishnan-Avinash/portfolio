@@ -25,7 +25,9 @@ const Header = () => {
   return (
     <>
       <section className="header-comp">
-        <h1 className="header-title">Avinash</h1>
+        <Link to="/">
+          <h1 className="header-title">Avinash</h1>
+        </Link>
         <ul>
           {elements.map((item) => (
             <li key={useId()}>
