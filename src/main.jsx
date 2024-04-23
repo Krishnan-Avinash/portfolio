@@ -13,6 +13,8 @@ import "./styles/mainSection.scss";
 import "./styles/about.scss";
 import "./styles/indivProj.scss";
 import "./styles/mediaQueries.scss";
+import "./styles/indivBlog.scss";
+import Blog from "./components/Blogs/Blog";
 
 const rootElement = document.getElementById("root");
 ReactDOM.createRoot(rootElement).render(
@@ -21,7 +23,7 @@ ReactDOM.createRoot(rootElement).render(
       <Routes>
         <Route path="/" element={<Header />}>
           <Route index element={<MainSection />} />
-          <Route path="blog" element={<h1>Blog</h1>} />
+          <Route path="blog" element={<Blog />} />
         </Route>
       </Routes>
     </ChakraProvider>
