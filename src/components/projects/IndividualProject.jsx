@@ -18,7 +18,7 @@ const IndividualProject = ({
     setIsHovered(false);
   };
   return (
-    <div className="indiv-project">
+    <div className={ind % 2 == 0 ? `indiv-project` : `indiv-project2`}>
       <div
         className="indiv-proj-left"
         onMouseEnter={handleMouseEnter}

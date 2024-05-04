@@ -1,5 +1,6 @@
 import React from "react";
 import proj1 from "../../assets/project1Img.jpg";
+import proj2 from "../../assets/proj21.jpg";
 import proj1Vid from "../../assets/proj1Trim2.mov";
 import IndividualProject from "./IndividualProject";
 import { Element } from "react-scroll";
@@ -7,13 +8,22 @@ import { Element } from "react-scroll";
 const Projects = () => {
   const proj = [
     {
+      img: proj2,
+      vid: proj1Vid,
+      title: "OneClickMart",
+      desc: "OneClickMart, a highly responsive, user-friendly e-commerce platform using React and Chakra UI, featuring dynamic shopping functionalities.",
+      liveLink: "https://oneclickmart.netlify.app/",
+      gitLink: "https://oneclickmart.netlify.app/",
+      id: 1,
+    },
+    {
       img: proj1,
       vid: proj1Vid,
       title: "UsabilityHub",
       desc: "Usabilityhub is an online platform whose frontend is cloned from their original webdesign and a new backend is developed  for users to upload and share website templates.  Need assistance? Our integrated chatbox powered by emailJS is there to help.",
       liveLink: "https://designusability.netlify.app/",
       gitLink: "https://github.com/Krishnan-Avinash/design-website",
-      id: 1,
+      id: 2,
     },
     // {
     //     img: { proj1 },
