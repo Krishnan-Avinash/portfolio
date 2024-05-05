@@ -2,6 +2,7 @@ import React from "react";
 import proj1 from "../../assets/project1Img.jpg";
 import proj2 from "../../assets/proj21.jpg";
 import proj1Vid from "../../assets/proj1Trim2.mov";
+import proj2Vid from "../../assets/proj2Trim.mp4";
 import IndividualProject from "./IndividualProject";
 import { Element } from "react-scroll";
 
@@ -9,7 +10,7 @@ const Projects = () => {
   const proj = [
     {
       img: proj2,
-      vid: proj1Vid,
+      vid: proj2Vid,
       title: "OneClickMart",
       desc: "OneClickMart, a highly responsive, user-friendly e-commerce platform using React and Chakra UI, featuring dynamic shopping functionalities.",
       liveLink: "https://oneclickmart.netlify.app/",
