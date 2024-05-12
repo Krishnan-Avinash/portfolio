@@ -18,7 +18,7 @@ const Blog = () => {
       title: "Add To Cart Feature",
       desc: "Dive into my latest blog where I break down how to implement an Add to Cart feature using React and Redux Toolkit.",
       liveLink:
-        "https://dev.to/avinash_krishnan/template-exchange-instant-support-emailjs-integration-4p8f",
+        "https://dev.to/avinash_krishnan/add-to-cart-feature-in-react-with-redux-toolkit-24f7",
       id: 2,
     },
     // {
