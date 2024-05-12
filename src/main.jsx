@@ -27,6 +27,7 @@ ReactDOM.createRoot(rootElement).render(
           <Route index element={<MainSection />} />
           <Route path="blog" element={<Blog />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<h1>Page Not Found</h1>} />
         </Route>
       </Routes>
     </ChakraProvider>
