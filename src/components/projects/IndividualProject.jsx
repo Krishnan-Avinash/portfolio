@@ -46,16 +46,12 @@ const IndividualProject = ({
         </h1>
         <h3>{desc}</h3>
         <div className="links">
-          <button className="indiv-proj-right-btn">
-            <Link target="_blank" to={liveLink}>
-              Live Demo
-            </Link>
-          </button>
-          <button className="indiv-proj-right-btn">
-            <Link target="_blank" to={gitLink}>
-              Code
-            </Link>
-          </button>
+          <Link target="_blank" to={liveLink}>
+            <button className="indiv-proj-right-btn">Live Demo</button>
+          </Link>
+          <Link target="_blank" to={gitLink}>
+            <button className="indiv-proj-right-btn">Code</button>
+          </Link>
         </div>
       </div>
     </div>
