@@ -14,7 +14,7 @@ const Projects = () => {
       title: "OneClickMart",
       desc: "OneClickMart, a highly responsive, user-friendly e-commerce platform using React and Chakra UI, featuring dynamic shopping functionalities.",
       liveLink: "https://oneclickmart.netlify.app/",
-      gitLink: "hhttps://github.com/Krishnan-Avinash/OneClickMart",
+      gitLink: "https://github.com/Krishnan-Avinash/OneClickMart",
       id: 1,
     },
     {
