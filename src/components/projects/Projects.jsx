@@ -1,8 +1,10 @@
 import React from "react";
 import proj1 from "../../assets/project1Img.jpg";
 import proj2 from "../../assets/proj21.jpg";
+import proj3 from "../../assets/proj33.jpg";
 import proj1Vid from "../../assets/proj1Trim2.mov";
 import proj2Vid from "../../assets/proj2Trim.mp4";
+import proj3Vid from "../../assets/proj3Vid.mp4";
 import IndividualProject from "./IndividualProject";
 import { Element } from "react-scroll";
 
@@ -25,6 +27,17 @@ const Projects = () => {
       liveLink: "https://designusability.netlify.app/",
       gitLink: "https://github.com/Krishnan-Avinash/design-website",
       id: 2,
+    },
+    {
+      img: proj3,
+      vid: proj3Vid,
+      title: "Code Reviewer",
+      desc: "Code Reviewer is a powerful VS Code extension that leverages the Google Gemini API to provide comprehensive code reviews. Enhance your coding workflow with AI-driven insights, automated feedback, and suggestions for improvements. Perfect for developers seeking to elevate their code quality effortlessly.",
+      liveLink:
+        "https://marketplace.visualstudio.com/items?itemName=AvinashKrishnan.temp-ext",
+      gitLink:
+        "https://marketplace.visualstudio.com/items?itemName=AvinashKrishnan.temp-ext",
+      id: 3,
     },
     // {
     //     img: { proj1 },
