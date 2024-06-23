@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import call from "../../assets/callus2png.png";
 import mail from "../../assets/mail2png.png";
 
@@ -6,7 +6,10 @@ import axios from "axios";
 
 import { useToast } from "@chakra-ui/react";
 
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
+  const form = useRef();
   const toast = useToast();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -45,6 +48,25 @@ const Contact = () => {
         isClosable: false,
       });
     }
+
+    //--------EMAILJS--------
+    emailjs.sendForm("service_x1j9p7o", "template_co08m1q", form.current, {
+      publicKey: "pxWtMsZz3fDp-EbC7",
+    });
+  };
+
+  const checkName = (e) => {
+    let p1 = e.target.value.slice(0, 1).toUpperCase();
+    console.log("p1: ", p1);
+    let p2 = e.target.value.slice(1, e.target.value.length);
+    setName(p1 + p2);
+  };
+
+  const checkMessage = (e) => {
+    let p1 = e.target.value.slice(0, 1).toUpperCase();
+    console.log("p1: ", p1);
+    let p2 = e.target.value.slice(1, e.target.value.length);
+    setMessage(p1 + p2);
   };
 
   const numCheck = (e) => {
@@ -71,13 +93,14 @@ const Contact = () => {
               <p> avinash.krishnan1605@gmail.com</p>
             </section>
           </div>
-          <form className="contact-right" onSubmit={onSubmitHandler}>
+          <form ref={form} className="contact-right" onSubmit={onSubmitHandler}>
             <div className="contact-right-top">
               <input
                 type="text"
                 placeholder="Your Name"
+                name="from_name"
+                onChange={(e) => checkName(e)}
                 value={name}
-                onChange={(e) => setName(e.target.value)}
                 required
               />
               <input
@@ -101,7 +124,7 @@ const Contact = () => {
                 id="message"
                 value={message}
                 placeholder="Your message"
-                onChange={(e) => setMessage(e.target.value)}
+                onChange={(e) => checkMessage(e)}
               ></textarea>
             </div>
             <div className="contact-right-bottom">
