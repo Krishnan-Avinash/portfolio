@@ -33,6 +33,10 @@ const Contact = () => {
         duration: 5000,
         isClosable: false,
       });
+      setName("");
+      setEmail("");
+      setNum("");
+      setMessage("");
     } else {
       toast({
         title: "Some Error Occured.",
@@ -41,6 +45,10 @@ const Contact = () => {
         isClosable: false,
       });
     }
+  };
+
+  const numCheck = (e) => {
+    setNum(e.target.value.slice(0, 10));
   };
 
   return (
@@ -53,7 +61,6 @@ const Contact = () => {
                 <img src={call} alt="Err" />
                 <h2>Mobile Number</h2>
               </section>
-              {/* <p className="removeCall">We are available 24/7</p> */}
               <p>Phone: +91 8373927883</p>
             </section>
             <section className="contact-left-bottom">
@@ -61,9 +68,6 @@ const Contact = () => {
                 <img src={mail} alt="Err" />
                 <h2>Email Address</h2>
               </div>
-              {/* <p className="removeMail">
-                Fill out the form and we will contact you within 24 hours
-              </p> */}
               <p> avinash.krishnan1605@gmail.com</p>
             </section>
           </div>
@@ -72,19 +76,22 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="Your Name"
+                value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
               />
               <input
                 type="email"
                 placeholder="Your Email"
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
               <input
                 type="number"
                 placeholder="Your Phone"
-                onChange={(e) => setNum(e.target.value)}
+                value={num}
+                onChange={(e) => numCheck(e)}
                 required
               />
             </div>
@@ -92,10 +99,10 @@ const Contact = () => {
               <textarea
                 name="message"
                 id="message"
+                value={message}
                 placeholder="Your message"
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
-              {/* <input type="text" placeholder="Your Message" required /> */}
             </div>
             <div className="contact-right-bottom">
               <button type="submit">Send Message</button>
