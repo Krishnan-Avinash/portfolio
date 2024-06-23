@@ -57,14 +57,12 @@ const Contact = () => {
 
   const checkName = (e) => {
     let p1 = e.target.value.slice(0, 1).toUpperCase();
-    console.log("p1: ", p1);
     let p2 = e.target.value.slice(1, e.target.value.length);
     setName(p1 + p2);
   };
 
   const checkMessage = (e) => {
     let p1 = e.target.value.slice(0, 1).toUpperCase();
-    console.log("p1: ", p1);
     let p2 = e.target.value.slice(1, e.target.value.length);
     setMessage(p1 + p2);
   };
