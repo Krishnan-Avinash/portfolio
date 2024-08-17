@@ -35,8 +35,7 @@ const Projects = () => {
       desc: "Code Reviewer is a powerful VS Code extension that leverages the Google Gemini API to provide comprehensive code reviews. Enhance your coding workflow with AI-driven insights, automated feedback, and suggestions for improvements. Perfect for developers seeking to elevate their code quality effortlessly.",
       liveLink:
         "https://marketplace.visualstudio.com/items?itemName=AvinashKrishnan.temp-ext",
-      gitLink:
-        "https://marketplace.visualstudio.com/items?itemName=AvinashKrishnan.temp-ext",
+      gitLink: "https://github.com/Krishnan-Avinash/Code-Reviewer",
       id: 3,
     },
     // {
