@@ -7,6 +7,9 @@ import tailwindImage from "../../../assets/tailwind-removebg-preview.png";
 import chakraImage from "../../../assets/chakra-removebg-preview.png";
 import sassImage from "../../../assets/sass.png";
 import tsImage from "../../../assets/ts.png";
+import nodejs from "../../../assets/nodejs.png";
+import expressjs from "../../../assets/expressjs.png";
+import mongodb from "../../../assets/mongodb.png";
 
 const IndividualSkills = () => {
   const elements = [
@@ -18,6 +21,9 @@ const IndividualSkills = () => {
     { image: tailwindImage },
     { image: chakraImage },
     { image: sassImage },
+    { image: nodejs },
+    { image: expressjs },
+    { image: mongodb },
   ];
   return (
     <div className="ind-skill">
