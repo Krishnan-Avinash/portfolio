@@ -1,6 +1,7 @@
 import React from "react";
 import blog1 from "../../assets/blog12.jpg";
 import blog2 from "../../assets/blog22.jpg";
+import blog3 from "../../assets/blog3.jpg";
 import IndividualBlog from "./IndividualBlog";
 
 const Blog = () => {
@@ -20,6 +21,14 @@ const Blog = () => {
       liveLink:
         "https://dev.to/avinash_krishnan/add-to-cart-feature-in-react-with-redux-toolkit-24f7",
       id: 2,
+    },
+    {
+      img: blog3,
+      title: "Introduction to Socket.io",
+      desc: "Learn the basics of integrating Socket.IO with the MERN stack to add real-time communication features like instant messaging and live updates to your applications.",
+      liveLink:
+        "https://dev.to/avinash_krishnan/introduction-to-socketio-in-mern-stack-491j",
+      id: 3,
     },
     // {
     //     img: { proj1 },
