@@ -20,15 +20,6 @@ const Projects = () => {
       id: 1,
     },
     {
-      img: proj1,
-      vid: proj1Vid,
-      title: "UsabilityHub",
-      desc: "Usabilityhub is an online platform whose frontend is cloned from their original webdesign and a new backend is developed  for users to upload and share website templates.  Need assistance? Our integrated chatbox powered by emailJS is there to help.",
-      liveLink: "https://designusability.netlify.app/",
-      gitLink: "https://github.com/Krishnan-Avinash/design-website",
-      id: 2,
-    },
-    {
       img: proj3,
       vid: proj3Vid,
       title: "Code Reviewer",
@@ -36,6 +27,15 @@ const Projects = () => {
       liveLink:
         "https://marketplace.visualstudio.com/items?itemName=AvinashKrishnan.temp-ext",
       gitLink: "https://github.com/Krishnan-Avinash/Code-Reviewer",
+      id: 2,
+    },
+    {
+      img: proj1,
+      vid: proj1Vid,
+      title: "UsabilityHub",
+      desc: "Usabilityhub is an online platform whose frontend is cloned from their original webdesign and a new backend is developed  for users to upload and share website templates.  Need assistance? Our integrated chatbox powered by emailJS is there to help.",
+      liveLink: "https://designusability.netlify.app/",
+      gitLink: "https://github.com/Krishnan-Avinash/design-website",
       id: 3,
     },
     // {
