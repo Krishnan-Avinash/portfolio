@@ -13,7 +13,7 @@ const CodingProfile = () => {
   async function getLeetcode() {
     try {
       const leet = await axios.get(
-        "http://localhost:4000/api/codingProfile/leetcode"
+        "https://portfolio-backend-g6av.onrender.com/api/codingProfile/leetcode"
       );
       setLeetcodeProfile(leet.data);
     } catch (error) {}
@@ -22,7 +22,7 @@ const CodingProfile = () => {
   async function getGFG() {
     try {
       const gfg = await axios.get(
-        "http://localhost:4000/api/codingProfile/gfg"
+        "https://portfolio-backend-g6av.onrender.com/api/codingProfile/gfg"
       );
       setGfgProfile(gfg.data);
     } catch (error) {}
