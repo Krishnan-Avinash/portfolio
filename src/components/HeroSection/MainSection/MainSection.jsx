@@ -6,6 +6,7 @@ import Skills from "../SkillSection/Skills";
 import { Link } from "react-router-dom";
 import About from "../../about/About";
 import Projects from "../../projects/Projects";
+import CodingProfile from "../../CodingProfile/CodingProfile";
 // import { Outlet } from "react-router-dom";
 
 const MainSection = () => {
@@ -36,6 +37,7 @@ const MainSection = () => {
         </div>
       </div>
       <Skills />
+      <CodingProfile />
       <Projects />
       {/* <About /> */}
       {/* <Outlet /> */}

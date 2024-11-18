@@ -1,0 +1,60 @@
+.coding-parent {
+  .coding-top {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    h1 {
+      font-size: 2.5rem;
+      color: black;
+      font-weight: bolder;
+    }
+  }
+  .loading {
+    padding: 2rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bolder;
+  }
+  .coding-profile-display {
+    padding: 2rem;
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .coding-item {
+      display: flex;
+      align-items: center;
+      .coding-item-left {
+        padding: 0.5rem 1.5rem;
+        width: 30%;
+      }
+      .coding-item-right {
+        box-shadow: (0px 0px 2px rgb(84, 192, 255));
+        // background-color: blue;
+        padding: 0.5rem 1.5rem;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .detail-container {
+          h1 {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .total-solved {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: underline;
+      span {
+        color: rgb(0, 38, 255);
+      }
+    }
+  }
+}

@@ -15,6 +15,8 @@ import "./styles/indivProj.scss";
 import "./styles/mediaQueries.scss";
 import "./styles/indivBlog.scss";
 import "./styles/contact.scss";
+import "./styles/codingprofile.scss";
+
 import Blog from "./components/Blogs/Blog";
 import Contact from "./components/contact/Contact";
 
