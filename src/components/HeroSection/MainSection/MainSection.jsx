@@ -2,6 +2,7 @@ import React from "react";
 import image from "../../../assets/image.jpg";
 import li from "../../../assets/linkedin2.jpg";
 import git from "../../../assets/github3.jpg";
+import leetcode from "../../../assets/leetcode2-removebg-preview.png";
 import Skills from "../SkillSection/Skills";
 import { Link } from "react-router-dom";
 import About from "../../about/About";
@@ -28,6 +29,11 @@ const MainSection = () => {
             <li>
               <Link to="https://github.com/Krishnan-Avinash">
                 <img src={git} alt="Github" />
+              </Link>
+            </li>
+            <li>
+              <Link to="https://leetcode.com/u/Avinash_krishnan/">
+                <img src={leetcode} alt="Leetcode" />
               </Link>
             </li>
           </ul>
