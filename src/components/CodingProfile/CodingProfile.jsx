@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import gfg from "../../assets/gfg2.jpg";
+// import gfg from "../../assets/gfg2.jpg";
 import leetcode from "../../assets/leetcode.png";
 import axios from "axios";
 
 const CodingProfile = () => {
   const [leetcodeProfile, setLeetcodeProfile] = useState({});
-  const [gfgProfile, setGfgProfile] = useState({});
+  // const [gfgProfile, setGfgProfile] = useState({});
   const [loading, setLoading] = useState(true);
   const [coding, setCoding] = useState([]);
   const [totalQuestions, setTotalQuestions] = useState(0);
@@ -19,19 +19,19 @@ const CodingProfile = () => {
     } catch (error) {}
   }
 
-  async function getGFG() {
-    try {
-      const gfg = await axios.get(
-        "https://portfolio-backend-g6av.onrender.com/api/codingProfile/gfg"
-      );
-      setGfgProfile(gfg.data);
-    } catch (error) {}
-  }
+  // async function getGFG() {
+  //   try {
+  //     const gfg = await axios.get(
+  //       "https://portfolio-backend-g6av.onrender.com/api/codingProfile/gfg"
+  //     );
+  //     setGfgProfile(gfg.data);
+  //   } catch (error) {}
+  // }
 
   useEffect(() => {
     const fetchProfiles = async () => {
       setLoading(true);
-      await Promise.all([getLeetcode(), getGFG()]);
+      await Promise.all([getLeetcode()]);
       setLoading(false);
     };
     fetchProfiles();
@@ -39,8 +39,9 @@ const CodingProfile = () => {
 
   useEffect(() => {
     if (
-      Object.keys(leetcodeProfile).length > 0 &&
-      Object.keys(gfgProfile).length > 0
+      Object.keys(leetcodeProfile).length > 0
+      // &&
+      // Object.keys(gfgProfile).length > 0
     ) {
       setCoding([
         {
@@ -52,21 +53,25 @@ const CodingProfile = () => {
           mediumSolved: leetcodeProfile.data.mediumSolved,
           hardSolved: leetcodeProfile.data.hardSolved,
         },
-        {
-          image: gfg,
-          name: "GeeksForGeeks",
-          userName: "avinashkriad3q",
-          totalSolved: gfgProfile.data.totalProblemsSolved,
-          easySolved: gfgProfile.data.Easy,
-          mediumSolved: gfgProfile.data.Medium,
-          hardSolved: gfgProfile.data.Hard,
-        },
+        // {
+        //   image: gfg,
+        //   name: "GeeksForGeeks",
+        //   userName: "avinashkriad3q",
+        //   totalSolved: gfgProfile.data.totalProblemsSolved,
+        //   easySolved: gfgProfile.data.Easy,
+        //   mediumSolved: gfgProfile.data.Medium,
+        //   hardSolved: gfgProfile.data.Hard,
+        // },
       ]);
       setTotalQuestions(
-        leetcodeProfile.data.totalSolved + gfgProfile.data.totalProblemsSolved
+        leetcodeProfile.data.totalSolved
+        // + gfgProfile.data.totalProblemsSolved
       );
     }
-  }, [leetcodeProfile, gfgProfile]);
+  }, [
+    leetcodeProfile,
+    //  gfgProfile
+  ]);
 
   return (
     <div className="coding-parent">
