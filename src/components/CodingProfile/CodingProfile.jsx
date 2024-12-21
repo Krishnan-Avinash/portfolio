@@ -16,6 +16,8 @@ const CodingProfile = () => {
         "https://portfolio-backend-g6av.onrender.com/api/codingProfile/leetcode"
       );
       setLeetcodeProfile(leet.data);
+      let stringSessionLeet = JSON.stringify(leet.data);
+      sessionStorage.setItem("leet", stringSessionLeet);
     } catch (error) {}
   }
 
@@ -27,19 +29,58 @@ const CodingProfile = () => {
       const validJsonString = gfg.data.dataOutput.replace(/'/g, '"');
       const objectData = JSON.parse(validJsonString);
       setGfgProfile(objectData);
+      let stringSessionGfg = JSON.stringify(objectData);
+      sessionStorage.setItem("gfg", stringSessionGfg);
     } catch (error) {}
   }
 
   useEffect(() => {
-    const fetchProfiles = async () => {
-      setLoading(true);
-      await Promise.all([getLeetcode(), getGFG()]);
+    const sessionLeet = sessionStorage.getItem("leet");
+    const sessionGfg = sessionStorage.getItem("gfg");
+
+    if (sessionLeet && sessionGfg) {
+      // Parse session storage data
+      const parsedLeet = JSON.parse(sessionLeet);
+      const parsedGfg = JSON.parse(sessionGfg);
+
+      // Initialize coding and totalQuestions from session storage
+      setCoding([
+        {
+          image: leetcode,
+          name: "LeetCode",
+          userName: "Avinash_krishnan",
+          totalSolved: parsedLeet?.data?.totalSolved,
+          easySolved: parsedLeet?.data?.easySolved,
+          mediumSolved: parsedLeet?.data?.mediumSolved,
+          hardSolved: parsedLeet?.data?.hardSolved,
+        },
+        {
+          image: gfg,
+          name: "GeeksForGeeks",
+          userName: "avinashkriad3q",
+          totalSolved: parsedGfg?.totalSolved,
+          easySolved: parsedGfg?.easySolved,
+          mediumSolved: parsedGfg?.mediumSolved,
+          hardSolved: parsedGfg?.hardSolved,
+        },
+      ]);
+      setTotalQuestions(
+        (parsedLeet?.data?.totalSolved || 0) + (parsedGfg?.totalSolved || 0)
+      );
       setLoading(false);
-    };
-    fetchProfiles();
+    } else {
+      // Fetch profiles if session storage is empty
+      const fetchProfiles = async () => {
+        setLoading(true);
+        await Promise.all([getLeetcode(), getGFG()]);
+        setLoading(false);
+      };
+      fetchProfiles();
+    }
   }, []);
 
   useEffect(() => {
+    // Update coding state after fetching new profiles
     if (
       Object.keys(leetcodeProfile).length > 0 &&
       Object.keys(gfgProfile).length > 0
