@@ -10,7 +10,7 @@ const CodingProfile = () => {
   const [coding, setCoding] = useState([]);
   const [totalQuestions, setTotalQuestions] = useState(0);
 
-  async function getLeetcode() {
+  async function getLeetcode(retries = 5, delay = 2000) {
     try {
       const leet = await axios.get(
         "https://portfolio-backend-g6av.onrender.com/api/codingProfile/leetcode"
@@ -18,10 +18,16 @@ const CodingProfile = () => {
       setLeetcodeProfile(leet.data);
       let stringSessionLeet = JSON.stringify(leet.data);
       sessionStorage.setItem("leet", stringSessionLeet);
-    } catch (error) {}
+    } catch (error) {
+      if (retries > 0) {
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        getLeetcode(retries - 1, delay);
+      } else {
+      }
+    }
   }
 
-  async function getGFG() {
+  async function getGFG(retries = 5, delay = 2000) {
     try {
       const gfg = await axios.get(
         "https://portfolio-backend-g6av.onrender.com/api/codingProfile/gfg"
@@ -31,7 +37,13 @@ const CodingProfile = () => {
       setGfgProfile(objectData);
       let stringSessionGfg = JSON.stringify(objectData);
       sessionStorage.setItem("gfg", stringSessionGfg);
-    } catch (error) {}
+    } catch (error) {
+      if (retries > 0) {
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        getLeetcode(retries - 1, delay);
+      } else {
+      }
+    }
   }
 
   useEffect(() => {
