@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import gfg from "../../assets/gfg2.jpg";
 import leetcode from "../../assets/leetcode.png";
 import axios from "axios";
+import loadingImage from "../../assets/loading22.gif";
 
 const CodingProfile = () => {
   const [leetcodeProfile, setLeetcodeProfile] = useState({});
@@ -129,7 +130,9 @@ const CodingProfile = () => {
         <h1>Coding Profile</h1>
       </div>
       {loading ? (
-        <div className="loading">Loading...</div>
+        <div className="loading">
+          <img src={loadingImage} alt="" />
+        </div>
       ) : (
         <div className="coding-profile-display">
           {coding.map((item, index) => (

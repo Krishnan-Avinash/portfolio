@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../../assets/image.jpg";
+import image from "../../../assets/me2.jpg";
 import li from "../../../assets/linkedin2.jpg";
 import git from "../../../assets/github3.jpg";
 import leetcode from "../../../assets/leetcode2-removebg-preview.png";
