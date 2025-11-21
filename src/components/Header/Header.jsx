@@ -34,11 +34,11 @@ const Header = () => {
       refTo: "projects",
       type: "scroll",
     },
-    {
-      name: "Contact",
-      linkTo: "/contact",
-      type: "route",
-    },
+    // {
+    //   name: "Contact",
+    //   linkTo: "/contact",
+    //   type: "route",
+    // },
   ];
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
