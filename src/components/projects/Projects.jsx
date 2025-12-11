@@ -1,8 +1,8 @@
 import React from "react";
-import proj3 from "../../assets/project1Img.jpg";
+import proj3 from "../../assets/project1Imgg.jpg";
 import proj1 from "../../assets/proj21.jpg";
 import proj2 from "../../assets/proj22.jpg";
-import proj3Vid from "../../assets/proj1Trim2.mov";
+import proj3Vid from "../../assets/proj1Trim2.mp4";
 import proj1Vid from "../../assets/proj2Trim.mp4";
 import proj2Vid from "../../assets/proj3Vid.mp4";
 import IndividualProject from "./IndividualProject";
@@ -32,10 +32,12 @@ const Projects = () => {
     {
       img: proj3,
       vid: proj3Vid,
-      title: "UsabilityHub",
-      desc: "Usabilityhub is an online platform whose frontend is cloned from their original webdesign and a new backend is developed  for users to upload and share website templates.  Need assistance? Our integrated chatbox powered by emailJS is there to help.",
-      liveLink: "https://designusability.netlify.app/",
-      gitLink: "https://github.com/Krishnan-Avinash/design-website",
+      title: "MentorLoop",
+      desc: "A closed-loop student intervention system built using React Native Web, Node/Express, and n8n. It tracks daily performance, locks students on low scores, notifies mentors through automated workflows, and unlocks access only after completing remedial tasks.",
+      liveLink:
+        "NAhttps://drive.google.com/file/d/1SMfgTHB6CJnM0qniHWN88mETmx0prwgS/view?usp=sharing",
+      gitLink:
+        "https://github.com/Krishnan-Avinash/React-Native-n8n-integration",
       id: 3,
     },
     // {

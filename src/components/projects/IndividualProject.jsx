@@ -24,7 +24,7 @@ const IndividualProject = ({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        {isHovered ? (
+        {isHovered && liveLink.slice(0, 2) != "NA" ? (
           <video
             src={vid}
             autoPlay
@@ -36,7 +36,7 @@ const IndividualProject = ({
             src={img}
             alt="Project Image"
             className="image"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "100%", height: "100%", cursor: "auto" }}
           />
         )}
       </div>
@@ -46,9 +46,15 @@ const IndividualProject = ({
         </h1>
         <h3>{desc}</h3>
         <div className="links">
-          <Link target="_blank" to={liveLink}>
-            <button className="indiv-proj-right-btn">Live Demo</button>
-          </Link>
+          {liveLink.slice(0, 2) != "NA" ? (
+            <Link target="_blank" to={liveLink}>
+              <button className="indiv-proj-right-btn">Live Demo</button>
+            </Link>
+          ) : (
+            <Link target="_blank" to={liveLink.slice(2, liveLink.length)}>
+              <button className="indiv-proj-right-btn">Demo Video</button>
+            </Link>
+          )}
           <Link target="_blank" to={gitLink}>
             <button className="indiv-proj-right-btn">Code</button>
           </Link>
